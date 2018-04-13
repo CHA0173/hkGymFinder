@@ -6,14 +6,11 @@ exports.homePage = (req, res) => {
   res.render('index', {
     title: 'I love dogs',
     name: 'wes',
-    // dog: req.query.dog,
     dog: 'snickers',
   });
 };
 
 exports.reverse = (req, res) => {
-  // res.send(req.params.name);
-  // const reverse = [req.params.name];
   const reverse = [...req.params.name].reverse().join('');
   res.json(reverse);
 };
@@ -24,6 +21,8 @@ exports.addStore = (req, res) => {
   });
 };
 
-exports.createStore = (req, res) => {
-  res.json(req.body);
+exports.createStore = async (req, res) => {
+  const store = await new Store(req.body).save();
+  req.flash('success', `Successfully created ${store.name}.  Care to leave a review?`);
+  res.redirect(`/store/${store.slug}`);
 };
