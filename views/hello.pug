@@ -1,9 +1,10 @@
 extends layout
 
-block header
-  h3 Header block overwrite
+//- block header
+//-   h3 Header block overwrite
 
 block content
+  p Sale ends in #{helpers.moment().endOf('week').fromNow()}
   .wrapper
     - const upDog = dog.toUpperCase();
     p.hello Hello my dog's name is #{upDog}
