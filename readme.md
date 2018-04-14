@@ -1,6 +1,6 @@
 ## What is this?
 
-Just you wait folks!
+Restaurant reviewer app built using Node.js
 
 ## Sample Data
 
