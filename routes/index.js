@@ -12,7 +12,7 @@ router.get('/stores', catchErrors(storeController.getStores));
 
 router.get('/reverse/:name', storeController.reverse);
 
-router.get('/add', storeController.addStore);
+router.get('/add', authController.isLoggedIn, storeController.addStore);
 router.post(
   '/add',
   storeController.upload,
