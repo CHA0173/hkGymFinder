@@ -1,38 +1,38 @@
 const express = require('express');
 
 const router = express.Router();
-const storeController = require('../controllers/storeController');
+const gymController = require('../controllers/gymController');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 const reviewController = require('../controllers/reviewController');
 
 const { catchErrors } = require('../handlers/errorHandlers');
 // Do work here
-router.get('/', catchErrors(storeController.getStores));
-router.get('/stores', catchErrors(storeController.getStores));
-router.get('/stores/page/:page', catchErrors(storeController.getStores));
+router.get('/', catchErrors(gymController.getGyms));
+router.get('/gyms', catchErrors(gymController.getGyms));
+router.get('/gyms/page/:page', catchErrors(gymController.getGyms));
 
-router.get('/reverse/:name', storeController.reverse);
+router.get('/reverse/:name', gymController.reverse);
 
-router.get('/add', authController.isLoggedIn, storeController.addStore);
+router.get('/add', authController.isLoggedIn, gymController.addGym);
 router.post(
   '/add',
-  storeController.upload,
-  catchErrors(storeController.resize),
-  catchErrors(storeController.createStore)
+  gymController.upload,
+  catchErrors(gymController.resize),
+  catchErrors(gymController.createGym)
 );
 router.post(
   '/add/:id',
-  storeController.upload,
-  catchErrors(storeController.resize),
-  catchErrors(storeController.updateStore)
+  gymController.upload,
+  catchErrors(gymController.resize),
+  catchErrors(gymController.updateGym)
 );
 
-router.get('/stores/:id/edit', catchErrors(storeController.editStore));
-router.get('/store/:slug', catchErrors(storeController.getStoreBySlug));
+router.get('/gyms/:id/edit', catchErrors(gymController.editGym));
+router.get('/gym/:slug', catchErrors(gymController.getGymBySlug));
 
-router.get('/tags', catchErrors(storeController.getStoresByTag));
-router.get('/tags/:tag', catchErrors(storeController.getStoresByTag));
+router.get('/tags', catchErrors(gymController.getGymsByTag));
+router.get('/tags/:tag', catchErrors(gymController.getGymsByTag));
 
 router.get('/login', userController.loginForm);
 router.post('/login', authController.login);
@@ -44,14 +44,14 @@ router.post('/account', catchErrors(userController.updateAccount));
 router.post('/account/forgot', catchErrors(authController.forgot));
 router.get('/account/reset/:token', catchErrors(authController.reset));
 router.post('/account/reset/:token', authController.confirmedPasswords, catchErrors(authController.update));
-router.get('/map', storeController.mapPage);
-router.get('/hearts', catchErrors(storeController.getHearts));
+router.get('/map', gymController.mapPage);
+router.get('/hearts', catchErrors(gymController.getHearts));
 router.post('/reviews/:id', authController.isLoggedIn, catchErrors(reviewController.addReview));
-router.get('/top', catchErrors(storeController.getTopStores));
+router.get('/top', catchErrors(gymController.getTopGyms));
 
 // API endpoints
-router.get('/api/search', catchErrors(storeController.searchStores));
-router.get('/api/stores/near', catchErrors(storeController.mapStores));
-router.post('/api/stores/:id/heart', authController.isLoggedIn, catchErrors(storeController.heartStore));
+router.get('/api/search', catchErrors(gymController.searchGyms));
+router.get('/api/gyms/near', catchErrors(gymController.mapGyms));
+router.post('/api/gyms/:id/heart', authController.isLoggedIn, catchErrors(gymController.heartGym));
 
 module.exports = router;

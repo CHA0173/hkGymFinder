@@ -1,23 +1,23 @@
-mixin storeForm(store = {})
-  form(action=`/add/${store._id || ''}` method='POST' class='card' enctype='multipart/form-data')
+mixin gymForm(gym = {})
+  form(action=`/add/${gym._id || ''}` method='POST' class='card' enctype='multipart/form-data')
     label(for='name') Name
-    input(type='text' name='name' value=store.name required)
+    input(type='text' name='name' value=gym.name required)
     label(for='description') Description
-    textarea(name='description' required)= store.description
+    textarea(name='description' required)= gym.description
     //- image uploods
     label(for='photo') Photo
       input(type='file' name='photo' id='photo' accept='image/gif, image/png, image/jpeg')
-      if store.photo
-        img(src=`/uploads/${store.photo}`, alt=store.name width=200)
+      if gym.photo
+        img(src=`/uploads/${gym.photo}`, alt=gym.name width=200)
     //- address, lng and lat
     label(for='address') Address
-    input(type='text' id='address' name='location[address]' value=(store.location && store.location.address) required)
+    input(type='text' id='address' name='location[address]' value=(gym.location && gym.location.address) required)
     label(for='lng') Longitude
-    input(input='text' id='lng' name='location[coordinates][0]' value=(store.location && store.location.coordinates[0]) required)
+    input(input='text' id='lng' name='location[coordinates][0]' value=(gym.location && gym.location.coordinates[0]) required)
     label(for='lat') Latitude
-    input(input='text' id='lat' name='location[coordinates][1]' value=(store.location && store.location.coordinates[1]) required)
+    input(input='text' id='lat' name='location[coordinates][1]' value=(gym.location && gym.location.coordinates[1]) required)
     - const choices = ['Wifi', 'Open Late', 'Family Friendly', 'Vegetarian', 'Licensed']
-    - const tags = store.tags || []
+    - const tags = gym.tags || []
     ul.tags
       each choice in choices
         .tag.tag__choice

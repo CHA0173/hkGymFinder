@@ -10,7 +10,7 @@ const mapOptions = {
 };
 
 function loadPlaces(map, lat = 43.2, lng = -79.8) {
-  axios.get(`/api/stores/near?lat=${lat}&lng=${lng}`).then(res => {
+  axios.get(`/api/gyms/near?lat=${lat}&lng=${lng}`).then(res => {
     const places = res.data;
     if (!places.length) {
       alert('No places found!');
@@ -34,8 +34,8 @@ function loadPlaces(map, lat = 43.2, lng = -79.8) {
       marker.addListener('click', function() {
         const html = `
           <div class="popup">
-            <a href="/store/${this.place.slug}">
-              <img src="/uploads/${this.place.photo || 'store.png'}" alt="${this.place.name}" />
+            <a href="/gym/${this.place.slug}">
+              <img src="/uploads/${this.place.photo || 'gym.png'}" alt="${this.place.name}" />
               <p>${this.place.name} - ${this.place.location.address}</p>
             </a>
           </div>

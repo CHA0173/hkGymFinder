@@ -6,26 +6,26 @@ include mixins/_review
 block content
   .single
     .single__hero
-      img.single__image(src=`/uploads/${store.photo || 'store.png'}`)
+      img.single__image(src=`/uploads/${gym.photo || 'gym.png'}`)
       h2.title.title--single
-        a(href=`/stores/${store.slug}`) #{store.name}
+        a(href=`/gyms/${gym.slug}`) #{gym.name}
   .single__details.inner
-    img.single__map(src=helpers.staticMap(store.location.coordinates))
-    p.single__location= store.location.address
-    p= store.description
+    img.single__map(src=helpers.staticMap(gym.location.coordinates))
+    p.single__location= gym.location.address
+    p= gym.description
 
-    if store.tags
+    if gym.tags
       ul.tags
-        each tag in store.tags
+        each tag in gym.tags
           li.tag
             a.tag__link(href=`/tags/${tag}`)
               span.tag__text ##{tag}
 
     if user
-      +reviewForm(store)
+      +reviewForm(gym)
 
-    if store.reviews
+    if gym.reviews
       .reviews
-        each review in store.reviews
+        each review in gym.reviews
           .review
             +review(review)

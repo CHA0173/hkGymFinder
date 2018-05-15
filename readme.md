@@ -2,6 +2,8 @@
 
 Hong Kong gym finder app built using Node.js
 
+To start app in dev: `npm run dev`
+
 ## Sample Data
 
 To load sample data, run the following command in your terminal: `npm run sample`

@@ -1049,7 +1049,7 @@ function loadPlaces(map) {
   var lat = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 43.2;
   var lng = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : -79.8;
 
-  _axios2.default.get('/api/stores/near?lat=' + lat + '&lng=' + lng).then(function (res) {
+  _axios2.default.get('/api/gyms/near?lat=' + lat + '&lng=' + lng).then(function (res) {
     var places = res.data;
     if (!places.length) {
       alert('No places found!');
@@ -1074,7 +1074,7 @@ function loadPlaces(map) {
     // show marker details when clicked
     markers.forEach(function (marker) {
       return marker.addListener('click', function () {
-        var html = '\n          <div class="popup">\n            <a href="/store/' + this.place.slug + '">\n              <img src="/uploads/' + (this.place.photo || 'store.png') + '" alt="' + this.place.name + '" />\n              <p>' + this.place.name + ' - ' + this.place.location.address + '</p>\n            </a>\n          </div>\n        ';
+        var html = '\n          <div class="popup">\n            <a href="/gym/' + this.place.slug + '">\n              <img src="/uploads/' + (this.place.photo || 'gym.png') + '" alt="' + this.place.name + '" />\n              <p>' + this.place.name + ' - ' + this.place.location.address + '</p>\n            </a>\n          </div>\n        ';
         infoWindow.setContent(html);
         infoWindow.open(map, this);
       });
@@ -1122,9 +1122,9 @@ var _dompurify2 = _interopRequireDefault(_dompurify);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function searchResultsHTML(stores) {
-  return stores.map(function (store) {
-    return '\n      <a href="/store/' + store.slug + '" class="search__result">\n        <strong>' + store.name + '</strong>\n      </a>\n    ';
+function searchResultsHTML(gyms) {
+  return gyms.map(function (gym) {
+    return '\n      <a href="/gym/' + gym.slug + '" class="search__result">\n        <strong>' + gym.name + '</strong>\n      </a>\n    ';
   }).join('');
 }
 

@@ -1,12 +1,12 @@
 extends layout
 
-include mixins/_storeCard
+include mixins/_gymCard
 include mixins/_pagination
 
 block content
   .inner
     h1= title
-    .stores
-      each store in stores
-        +storeCard(store)
+    .gyms
+      each gym in gyms
+        +gymCard(gym)
     +pagination(page, pages, count)

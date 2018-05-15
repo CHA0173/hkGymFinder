@@ -1,25 +1,25 @@
-mixin storeCard(store={})
-  .store
-    .store__hero
-      .store__actions
+mixin gymCard(gym={})
+  .gym
+    .gym__hero
+      .gym__actions
         if user
-          .store__action.store__action--heart
-            form.heart(method='POST' action=`/api/stores/${store._id}/heart`)
+          .gym__action.gym__action--heart
+            form.heart(method='POST' action=`/api/gyms/${gym._id}/heart`)
               - const heartStrings = user.hearts.map(obj => obj.toString());
-              - const heartClass = heartStrings.includes(store._id.toString()) ? 'heart__button--hearted' : ''
+              - const heartClass = heartStrings.includes(gym._id.toString()) ? 'heart__button--hearted' : ''
               button.heart__button(type='submit' name='heart' class=heartClass)
                 != helpers.icon('heart')
-        if user && store.author.equals(user._id)
-          .store__action.store__action--edit
-            a(href=`/stores/${store._id}/edit`)
+        if user && gym.author.equals(user._id)
+          .gym__action.gym__action--edit
+            a(href=`/gyms/${gym._id}/edit`)
               != helpers.icon('pencil')
-        if store.reviews
-          .store__action.store__action--count
+        if gym.reviews
+          .gym__action.gym__action--count
             != helpers.icon('review')
-            span= store.reviews.length
-      img(src=`/uploads/${store.photo || 'store.png'}`)
+            span= gym.reviews.length
+      img(src=`/uploads/${gym.photo || 'gym.png'}`)
       h2.title
-        a(href=`/store/${store.slug}`) #{store.name}
-    .store__details
-      p= store.description.split(' ').slice(0,20).join(' ')
+        a(href=`/gym/${gym.slug}`) #{gym.name}
+    .gym__details
+      p= gym.description.split(' ').slice(0,20).join(' ')
 

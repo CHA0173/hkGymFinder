@@ -2,7 +2,7 @@ extends layout
 
 block content
   .inner
-    h2 Top #{stores.length} Stores
+    h2 Top #{gyms.length} Gyms
     table.table
       thead
         td Photo
@@ -10,12 +10,12 @@ block content
         td Name
         td Reviews
         td Average rating
-      each store, i in stores
+      each gym, i in gyms
         tr
           td
-            a(href=`/store/${store.slug}`)
-              img(width=200 src=`/uploads/${store.photo || store.png}` alt=store.name)
+            a(href=`/gym/${gym.slug}`)
+              img(width=200 src=`/uploads/${gym.photo || gym.png}` alt=gym.name)
           td #{i+1}
-          td: a(href=`/store/${store.slug}`)= store.name
-          td= store.reviews.length
-          td #{Math.round(store.averageRating *10) /10} / 5
+          td: a(href=`/gym/${gym.slug}`)= gym.name
+          td= gym.reviews.length
+          td #{Math.round(gym.averageRating *10) /10} / 5

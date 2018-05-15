@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Store = mongoose.model('Store');
+const Gym = mongoose.model('Gym');
 const User = mongoose.model('User');
 
 const multer = require('multer');
@@ -32,9 +32,9 @@ exports.reverse = (req, res) => {
   res.json(reverse);
 };
 
-exports.addStore = (req, res) => {
-  res.render('editStore', {
-    title: 'Add Store',
+exports.addGym = (req, res) => {
+  res.render('editGym', {
+    title: 'Add Gym',
   });
 };
 
@@ -56,62 +56,62 @@ exports.resize = async (req, res, next) => {
   next();
 };
 
-exports.createStore = async (req, res) => {
+exports.createGym = async (req, res) => {
   req.body.author = req.user._id;
-  const store = await new Store(req.body).save();
-  req.flash('success', `Successfully created ${store.name}.  Care to leave a review?`);
-  res.redirect(`/store/${store.slug}`);
+  const gym = await new Gym(req.body).save();
+  req.flash('success', `Successfully created ${gym.name}.  Care to leave a review?`);
+  res.redirect(`/gym/${gym.slug}`);
 };
 
-exports.getStores = async (req, res) => {
+exports.getGyms = async (req, res) => {
   const page = req.params.page || 1;
   const limit = 4;
   const skip = page * limit - limit;
-  const storesPromise = Store.find()
+  const gymsPromise = Gym.find()
     .skip(skip)
     .limit(limit)
     .sort({ created: 'desc' });
 
-  const countPromise = Store.count();
-  const [stores, count] = await Promise.all([storesPromise, countPromise]);
+  const countPromise = Gym.count();
+  const [gyms, count] = await Promise.all([gymsPromise, countPromise]);
   const pages = Math.ceil(count / limit);
-  if (!stores.length && skip) {
+  if (!gyms.length && skip) {
     req.flash('info', `Page ${page} does not exist, redirecting to page ${pages}`);
-    res.redirect(`/stores/page/${pages}`);
+    res.redirect(`/gyms/page/${pages}`);
     return;
   }
-  res.render('stores', {
-    title: `Stores`,
-    stores,
+  res.render('gyms', {
+    title: `Gyms`,
+    gyms,
     page,
     pages,
     count,
   });
 };
 
-const confirmOwner = (store, user) => {
-  if (!store.author.equals(user._id)) {
-    throw Error('You must own the store in order to edit it!');
+const confirmOwner = (gym, user) => {
+  if (!gym.author.equals(user._id)) {
+    throw Error('You must own the gym in order to edit it!');
   }
 };
 
-exports.editStore = async (req, res) => {
-  // 1. Find the store given id
-  const store = await Store.findOne({ _id: req.params.id });
-  // 2. Confirm user is owner of store
-  confirmOwner(store, req.user);
+exports.editGym = async (req, res) => {
+  // 1. Find the gym given id
+  const gym = await Gym.findOne({ _id: req.params.id });
+  // 2. Confirm user is owner of gym
+  confirmOwner(gym, req.user);
   // 3. Render out edit form so user can update
-  res.render('editStore', {
-    title: `Edit ${store.name}`,
-    store,
+  res.render('editGym', {
+    title: `Edit ${gym.name}`,
+    gym,
   });
 };
 
-exports.updateStore = async (req, res) => {
+exports.updateGym = async (req, res) => {
   // set location body to be a point
   req.body.location.type = 'Point';
-  // 1. Find store
-  const store = await Store.findOneAndUpdate(
+  // 1. Find gym
+  const gym = await Gym.findOneAndUpdate(
     {
       _id: req.params.id,
     },
@@ -121,38 +121,38 @@ exports.updateStore = async (req, res) => {
       runValidators: true,
     }
   ).exec();
-  req.flash('success', `Successfully updated ${store.name}. <a href="/stores/${store.slug}">View store -> </a>`);
-  res.redirect(`/stores/${store._id}/edit`);
-  // 2. Redirect to store & flash success
+  req.flash('success', `Successfully updated ${gym.name}. <a href="/gyms/${gym.slug}">View gym -> </a>`);
+  res.redirect(`/gyms/${gym._id}/edit`);
+  // 2. Redirect to gym & flash success
 };
 
-exports.getStoreBySlug = async (req, res, next) => {
-  const store = await Store.findOne({ slug: req.params.slug }).populate('author reviews');
-  if (!store) {
+exports.getGymBySlug = async (req, res, next) => {
+  const gym = await Gym.findOne({ slug: req.params.slug }).populate('author reviews');
+  if (!gym) {
     return next();
   }
-  res.render('store', {
-    title: `${store.name}`,
-    store,
+  res.render('gym', {
+    title: `${gym.name}`,
+    gym,
   });
 };
 
-exports.getStoresByTag = async (req, res) => {
+exports.getGymsByTag = async (req, res) => {
   const tag = req.params.tag;
   const tagQuery = tag || { $exists: true };
-  const tagsPromise = Store.getTagsList();
-  const storesPromise = Store.find({ tags: tagQuery });
-  const [tags, stores] = await Promise.all([tagsPromise, storesPromise]);
+  const tagsPromise = Gym.getTagsList();
+  const gymsPromise = Gym.find({ tags: tagQuery });
+  const [tags, gyms] = await Promise.all([tagsPromise, gymsPromise]);
   res.render('tags', {
     title: `tags`,
     tags,
     tag,
-    stores,
+    gyms,
   });
 };
 
-exports.searchStores = async (req, res) => {
-  const stores = await Store.find(
+exports.searchGyms = async (req, res) => {
+  const gyms = await Gym.find(
     {
       $text: {
         $search: req.query.q,
@@ -166,10 +166,10 @@ exports.searchStores = async (req, res) => {
       score: { $meta: 'textScore' },
     })
     .limit(5);
-  res.json(stores);
+  res.json(gyms);
 };
 
-exports.mapStores = async (req, res) => {
+exports.mapGyms = async (req, res) => {
   const coordinates = [req.query.lng, req.query.lat].map(parseFloat);
   const q = {
     location: {
@@ -182,17 +182,17 @@ exports.mapStores = async (req, res) => {
       },
     },
   };
-  const stores = await Store.find(q)
+  const gyms = await Gym.find(q)
     .select('slug name description location')
     .limit(10);
-  res.json(stores);
+  res.json(gyms);
 };
 
 exports.mapPage = (req, res) => {
   res.render('map', { title: 'Map' });
 };
 
-exports.heartStore = async (req, res) => {
+exports.heartGym = async (req, res) => {
   const hearts = req.user.hearts.map(obj => obj.toString());
   const operator = hearts.includes(req.params.id) ? '$pull' : '$addToSet';
   const user = await User.findByIdAndUpdate(req.user._id, {
@@ -203,13 +203,13 @@ exports.heartStore = async (req, res) => {
 };
 
 exports.getHearts = async (req, res) => {
-  const stores = await Store.find({
+  const gyms = await Gym.find({
     _id: { $in: req.user.hearts },
   });
-  res.render('stores', { title: 'Hearted Stores', stores });
+  res.render('gyms', { title: 'Hearted Gyms', gyms });
 };
 
-exports.getTopStores = async (req, res) => {
-  const stores = await Store.getTopStores();
-  res.render('topStores', { stores, title: 'Top Stores!' });
+exports.getTopGyms = async (req, res) => {
+  const gyms = await Gym.getTopGyms();
+  res.render('topGyms', { gyms, title: 'Top Gyms!' });
 };
