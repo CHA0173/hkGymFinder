@@ -4,17 +4,9 @@ Hong Kong gym finder app built using Node.js
 
 ## Sample Data
 
-To load sample data, run the following command in your terminal:
+To load sample data, run the following command in your terminal: `npm run sample`
 
-```bash
-npm run sample
-```
-
-If you have previously loaded in this data, you can wipe your database 100% clean with:
-
-```bash
-npm run blowitallaway
-```
+To wipe database: `npm run drop`
 
 That will populate 16 gyms with 3 authors and 41 reviews. The logins for the authors are as follows:
 
