@@ -1,6 +1,6 @@
 ## What is this?
 
-Restaurant reviewer app built using Node.js
+Hong Kong gym finder app built using Node.js
 
 ## Sample Data
 
