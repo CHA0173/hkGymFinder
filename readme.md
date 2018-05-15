@@ -8,7 +8,9 @@ To load sample data, run the following command in your terminal: `npm run sample
 
 To wipe database: `npm run drop`
 
-That will populate 16 gyms with 3 authors and 41 reviews. The logins for the authors are as follows:
+That will populate 16 gyms with 3 authors and 41 reviews.
+
+Logins for the users are as follows:
 
 |Name|Email (login)|Password|
 |---|---|---|
