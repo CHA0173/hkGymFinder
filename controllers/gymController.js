@@ -171,6 +171,7 @@ exports.searchGyms = async (req, res) => {
 
 exports.mapGyms = async (req, res) => {
   const coordinates = [req.query.lng, req.query.lat].map(parseFloat);
+  // console.log(coordinates);
   const q = {
     location: {
       $near: {

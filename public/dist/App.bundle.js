@@ -1039,15 +1039,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var mapOptions = {
   center: {
-    lat: 43.2,
-    lng: -79.8
+    lat: 22.303444,
+    lng: 114.182194
   },
   zoom: 10
 };
 
 function loadPlaces(map) {
-  var lat = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 43.2;
-  var lng = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : -79.8;
+  var lat = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 22.303444;
+  var lng = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 114.182194;
 
   _axios2.default.get('/api/gyms/near?lat=' + lat + '&lng=' + lng).then(function (res) {
     var places = res.data;
