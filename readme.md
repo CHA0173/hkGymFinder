@@ -3,14 +3,16 @@
 Hong Kong gym finder app built using Node.js
 
 In `package.json` and under `"scripts"` at `line 8` are the commands to run the app.
-* To start app run: `npm start`
-* To start app in development mode (testing): `npm run dev`
-* To wipe database: `npm run drop`
-* To load sample data, run the following command in your terminal: `npm run sample`
+
+For a fresh install run:
+1. `npm run drop` To wipe database (if any)
+2. `npm run sample` To load sample data
+3. `npm start` To start app
+* [optional] `npm run dev` To start app in development mode (testing)
 
 
 ## Sample Data
-Sample data will autopopulate if you run the above command `npm run sample` into the following models:
+`npm run sample` To autopopulate the mongodb database with the following models:
 * 16 Gym objects
 * 3 Author ojbects
 * 41 Review objects.
