@@ -1,96 +1,104 @@
 [
   {
     "_id": "58c039938060197ca0b52d4d",
-    "slug": "olive-oil",
-    "name": "Olive Oil",
-    "description": "Friendly atmosphere. Great selection of local brews. ",
+    "slug": "fitness-first-north",
+    "name": "Fitness First North Point",
+    "description": "Friendly atmosphere. Lot of classes.",
     "author": "58c039018060197ca0b52d4c",
     "photo": "a10ca916-af2a-4a98-96a1-3e320df006f9.jpeg",
     "tags": [
       "Wifi",
-      "Open Late",
-      "Vega",
-      "Licensed"
+      "Shower",
+      "Yoga",
+      "Cycling"
     ],
     "created": "2017-03-08T17:04:19.860Z",
     "location": {
-      "address": "Hamilton, ON, Canada",
+      "address": "Kiu Fai Mansion, 413 King's Rd, North Point, Hong Kong",
       "coordinates": [
-        -79.87110239999998,
-        43.2557206
+        114.116617,
+        22.369471
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c039ee8060197ca0b52d4e",
-    "slug": "sourdough-on-king",
-    "name": "Sour on King",
-    "description": "Amazing selection of everything sour, fermented and tart. ",
+    "slug": "fitness-first-harbour",
+    "name": "Fitness First Harbour City",
+    "description": "Nice trainers and lots of water fountains",
     "author": "58c039018060197ca0b52d4c",
     "photo": "0d3624fc-78ee-4297-8d15-e191b9775520.jpeg",
     "tags": [
-      "Vega"
+      "Wifi",
+      "Shower",
+      "Yogo",
+      "Sauna",
+      "Licensed",
+      "Cycling Studio"
     ],
     "created": "2017-03-08T17:05:50.134Z",
     "location": {
-      "address": "King William Street, Hamilton, ON, Canada",
+      "address": "World Commerce Centre, Harbour City, 11 Canton Road, Tsim Sha Tsui, Kowloon",
       "coordinates": [
-        -79.85870940000001,
-        43.25482439999999
+        114.129564,
+        22.270491
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c03a428060197ca0b52d4f",
-    "slug": "the-french",
-    "name": "The French",
-    "description": "High end french restaurant on the hippest street in town. ",
+    "slug": "fitness-causeway",
+    "name": "Fitness First Causeway",
+    "description": "Open 24 hours and beautiful showers",
     "author": "58c039018060197ca0b52d4c",
     "photo": "bb7f7d60-9b0c-46b0-a0e4-1422d5752567.jpeg",
     "tags": [
-      "Open Late",
-      "Licensed"
+      "Shower",
+      "Yoga",
+      "Licensed",
+      "Cycling Studio"
     ],
     "created": "2017-03-08T17:07:14.681Z",
     "location": {
-      "address": "The French, King William Street, Hamilton, ON, Canada",
+      "address": "7-8/F , 535 Jaffe Road,Causeway Bay,On, Hong Kong",
       "coordinates": [
-        -79.8674666,
-        43.257414
+        114.163660,
+        22.278531
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c03a958060197ca0b52d50",
-    "slug": "rust-city-brewery",
-    "name": "Rust City Brewery",
-    "description": "A family run urban coffee house, craft beer pub and brewpub combining our love of coffee, beer and people",
+    "slug": "physical-nathan",
+    "name": "Physical Fitness & Beauty",
+    "description": "All range of facility with World-class advanced and diverse fitness equipment",
     "author": "58c039018060197ca0b52d4c",
     "photo": "6c34119d-b9fd-4051-911e-948a16068229.jpeg",
     "tags": [
-      "Wifi",
-      "Open Late",
-      "Family Friendly",
-      "Licensed"
+      "Dance Studio",
+      "Licensed",
+      "MMA/thai boxing",
+      "Sauna",
+      "Shower"
     ],
     "created": "2017-03-08T17:08:37.131Z",
     "location": {
-      "address": "27 King William Street, Hamilton, ON, Canada",
+      "address": "Plaza Hollywood, 3-6/F., 610 Nathan Road, 3 Lung Poon St, Mong Kok, ON, Kowloon",
       "coordinates": [
-        -79.8677515,
-        43.2574964
+        114.154648,
+        22.282026
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c057838060197ca0b52d54",
-    "slug": "berkeley-north",
-    "name": "Berkeley North",
-    "description": "Set in the revitalized James St. North neighbourhood, Berkeley North is a West Coast inspired restaurant located on historic King William Street in the heart of downtown Hamilton.\r\n",
+    "slug": "physical-tst",
+    "name": "Physical Fitness TST",
+    "description": "Diverse fitness equipment and they sell smoothies",
     "author": "58c039018060197ca0b52d4c",
     "photo": "9f2fc898-56b9-47fd-8a78-1d43c1377dc8.jpeg",
     "tags": [
@@ -99,238 +107,252 @@
     ],
     "created": "2017-03-08T19:12:03.957Z",
     "location": {
-      "address": "31 King William St, Hamilton, ON, Canada",
+      "address": "1 Sha Tin Station Circuit, Sha Tin, ON, Kowloon",
       "coordinates": [
-        -79.86767780000002,
-        43.25747380000001
+        114.144649,
+        22.283932
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c05aef8060197ca0b52d55",
-    "slug": "mezcal-tacos--tequila",
-    "name": "Mezcal Tacos & Tequila",
-    "description": "Familiar Mexican fare with a gourmet twist & housemade margaritas, plus a lively late-night scene.\r\n",
+    "slug": "physical-queens",
+    "name": "Physical Queens Road",
+    "description": "TRX and pilates studios!",
     "author": "58c039018060197ca0b52d4c",
     "photo": "96a33834-d7aa-4758-b980-fca901ea5956.jpeg",
     "tags": [
-      "Open Late",
-      "Licensed"
+      "Wifi",
+      "Yoga",
+      "Dance Studio",
+      "Licensed",
+      "MMA/thai boxing"
     ],
     "created": "2017-03-08T19:26:39.863Z",
     "location": {
-      "address": "150 James St S, Hamilton, ON L8P 3A2, Canada",
+      "address": "12/F, Grand Millennium Plaza, 181 Queen's Road, Sheung Wan, ON , Hong Kong",
       "coordinates": [
-        -79.8712961,
-        43.2522698
+        114.133019,
+        22.285044
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c05b558060197ca0b52d56",
-    "slug": "two-black-sheep",
-    "name": "Two Black Sheep",
-    "description": "Intimate, rustic-chic bar providing oysters, charcuterie, cheese plates, wine & craft cocktails.\r\n",
+    "slug": "pure-fairmont",
+    "name": "Pure Fairmont",
+    "description": "Best of fairmont gyms.",
     "author": "58c039018060197ca0b52d4c",
     "photo": "e3c532c9-cb77-4d92-9267-9abedeae2820.jpeg",
     "tags": [
-      "Open Late",
-      "Licensed"
+      "Shower",
+      "24 hours"
     ],
     "created": "2017-03-08T19:28:21.738Z",
     "location": {
-      "address": "163 John St S, Hamilton, ON L8N 2C3, Canada",
+      "address": "Fairmont House, 8 Cotton Tree Dr, Central, ON, Hong Kong",
       "coordinates": [
-        -79.8681206,
-        43.2517517
+        114.195675,
+        22.289650
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c05bcd8060197ca0b52d57",
-    "slug": "donut-monster",
-    "name": "Donut Monster",
-    "description": "Small-batch, from-scratch donuts available at select coffee shops on Thursdays, Fridays, and Saturdays.",
+    "slug": "pure-repulse",
+    "name": "Pure Fitness Repulse",
+    "description": "Provide an inspiring environment and passionate professionals, realising the very best of every body",
     "author": "58c039018060197ca0b52d4c",
     "photo": "a6b38a1d-38c3-47af-ae4c-0ab26d8edec3.jpeg",
     "tags": [
-      "Vega"
+      "Shower",
+      "24 hours",
+      "Yoga"
     ],
     "created": "2017-03-08T19:30:21.147Z",
     "location": {
-      "address": "The Kitchen Collective, King Street East, Hamilton, ON, Canada",
+      "address": "Level 1 The Pulse, 28 Beach Rd, Repulse Bay, ON, Hong Kong",
       "coordinates": [
-        -79.84285160000002,
-        43.2515332
+        114.218375,
+        22.284119
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c05c208060197ca0b52d58",
-    "slug": "the-harbour-diner",
-    "name": "The Harbour Diner",
-    "description": "Classic diner eats like eggs Benedict & club sandwiches star at this charming, old-timey nook.\r\n",
+    "slug": "pure-percival",
+    "name": "Pure Percival Street",
+    "description": "Great place to get better body.",
     "author": "58c039018060197ca0b52d4c",
     "photo": "b5792f01-41c8-41b7-906d-1bdb411e4a55.jpeg",
-    "tags": [],
+    "tags": [
+      "Yoga",
+      "Cycling Studio"
+    ],
     "created": "2017-03-08T19:31:44.389Z",
     "location": {
-      "address": "The Harbour Diner, James Street North, Hamilton, ON, Canada",
+      "address": "15/F Lee Theatre Plaza, 99 Percival St, Causeway Bay, ON, Hong Kong",
       "coordinates": [
-        -79.86328909999997,
-        43.2694073
+        114.241569,
+        22.267584
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c05f928060197ca0b52d59",
-    "slug": "charred",
-    "name": "Charred",
-    "description": "BBQ chicken prepared Portugese style over an open charcoal pit.",
+    "slug": "anytime-kowloon",
+    "name": "Anytime Fitness Kowloon",
+    "description": "#1 Top Global Franchise by Entrepreneur magazine, Convenient, Affordable, and FUN.",
     "author": "58c039018060197ca0b52d4c",
     "photo": "4a5cb791-0140-4fa2-864c-af786640157d.jpeg",
     "tags": [
-      "Open Late",
-      "Family Friendly",
-      "Licensed"
+      "Yoga",
+      "MMA/thai boxing",
+      "Cycling Studio",
+      "Shower"
     ],
     "created": "2017-03-08T19:46:26.122Z",
     "location": {
-      "address": "Charred Rotisserie House, James Street North, Hamilton, ON, Canada",
+      "address": "Shop No.3, 1st floor, The Avery 16 Hau Wong Road, Kowloon City, ON, Kowloon",
       "coordinates": [
-        -79.86624549999999,
-        43.2627693
+        114.174264,
+        22.304787
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c05fd08060197ca0b52d5a",
-    "slug": "green-bar",
-    "name": "Green Bar",
-    "description": "Cheery counter-serve serving organic, health-conscious fare such as smoothies & simple vegan eats.\r\n",
+    "slug": "anytime-kwun",
+    "name": "Anytime fitness Kwun Tong",
+    "description": "Best gym in Kwun tong",
     "author": "58c039018060197ca0b52d4c",
     "photo": "7ea7c02c-9054-442a-9126-788bf3471499.jpeg",
     "tags": [
-      "Wifi",
-      "Vega"
+      "MMA/thai boxing",
+      "24 hours"
     ],
     "created": "2017-03-08T19:47:28.651Z",
     "location": {
-      "address": "Green Bar, James Street North, Hamilton, ON, Canada",
+      "address": "6/F, The Wave, 4 Hing Yip Street, Kwun Tong, ON, Kowloon",
       "coordinates": [
-        -79.866177,
-        43.2625711
+        114.230996,
+        22.304517
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c060558060197ca0b52d5b",
-    "slug": "work",
-    "name": "Work",
-    "description": "Dive bar, unreal nachos and huge selection of beers on both on tap and in bottle. ",
+    "slug": "anytime-happy",
+    "name": "Anytime Happy Valley",
+    "description": "Close to happy valley",
     "author": "58c039018060197ca0b52d4c",
     "photo": "3e143d06-a3df-4e15-86f6-4efc0a3f5fbc.jpeg",
     "tags": [
-      "Open Late",
-      "Licensed"
+      "MMA/thai boxing",
+      "Cycling Studio",
+      "Shower",
+      "24 hours"
     ],
     "created": "2017-03-08T19:49:41.971Z",
     "location": {
-      "address": "Work Restaurant, James Street North, Hamilton, ON, Canada",
+      "address": "1/F, King Inn Mansion, 13-15 Yik Yam Street, Happy Valley, ON, Hong Kong",
       "coordinates": [
-        -79.86569700000001,
-        43.2649159
+        114.207309,
+        22.32995
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c060e98060197ca0b52d5d",
-    "slug": "born--raised",
-    "name": "Born & Raised",
-    "description": "Wood fired Pizzas, oysters and a modern take on classic Italian dishes. Great collection of locals beers. ",
+    "slug": "utime-sai-ying-pun",
+    "name": "U-Time Fitness",
+    "description": "Great mix of locals and expats gym",
     "author": "58c039018060197ca0b52d4c",
     "photo": "6da53d2e-c0e0-4aef-9ec9-9513b79ece15.jpeg",
     "tags": [
-      "Open Late",
-      "Licensed"
+      "MMA/thai boxing",
+      "Cycling Studio",
+      "Shower",
+      "24 hours"
     ],
     "created": "2017-03-08T19:52:09.768Z",
     "location": {
-      "address": "Born & Raised, James Street North, Hamilton, ON, Canada",
+      "address": "120 Connaught Rd W, Sai Ying Pun, ON, Hong Kong",
       "coordinates": [
-        -79.86640360000001,
-        43.2624108
+        114.253952,
+        22.307899
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c0609b8060197ca0b52d5c",
-    "slug": "the-burnt-tongue",
-    "name": "The Burnt Tongue",
-    "description": "Counter-serve joint with an ever-changing selection of elevated soups, plus burgers & other fare.\r\n",
+    "slug": "utime-kennedy",
+    "name": "U-Time Kennedy",
+    "description": "This studio offers state-of-the-art Life Fitness strength and cardio as well as the latest Elliptical trainers from Octane Fitness.",
     "author": "58c039018060197ca0b52d4c",
     "photo": "7628c82c-66df-493c-ba5f-9237c6bc3516.jpeg",
     "tags": [
-      "Family Friendly",
-      "Vega",
-      "Licensed"
+      "Yoga",
+      "MMA/thai boxing",
+      "Cycling Studio"
     ],
     "created": "2017-03-08T19:50:51.495Z",
     "location": {
-      "address": "The Burnt Tongue, Cannon Street East, Hamilton, ON, Canada",
+      "address": "Wah Po Building, G/F, 1 New Praya Kennedy Town, Kennedy Town, ON, Hong Kong",
       "coordinates": [
-        -79.8669046,
-        43.26053
+        114.162274,
+        22.335221
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c061518060197ca0b52d5e",
-    "slug": "bar-izakaya",
-    "name": "Bar Izakaya",
-    "description": "Incorporating local meats and produce with the finest Japanese ingredients. The menu consists of Rice bowls and Ramen, while the evening menu is served family style with small & medium sharing plates and house board options. ",
+    "slug": "anytime-kennedy",
+    "name": "Anytime Fitness Kennedy",
+    "description": "Right next to MTR station",
     "author": "58c039018060197ca0b52d4c",
     "photo": "c589ef95-b942-4e8a-a63e-cab74c465b9d.jpeg",
     "tags": [
-      "Family Friendly"
+      "Cycling Studio",
+      "Yoga"
     ],
     "created": "2017-03-08T19:53:53.295Z",
     "location": {
-      "address": "Bar Izakaya, James Street North, Hamilton, ON, Canada",
+      "address": "412 Cross St, Kennedy Town, Hong Kong",
       "coordinates": [
-        -79.86634700000002,
-        43.26375700000001
+        114.140342,
+        22.285915
       ],
       "type": "Point"
     }
   },
   {
     "_id": "58c065dbbbb1a51e0d43a04f",
-    "slug": "mulberry-coffee",
-    "name": "Mulberry Coffee",
-    "description": "Chill cafe in the former lobby of an 1880s hotel serving coffee, sweets & panini, plus cocktails.\r\n",
-    "photo": "1b7870df-e238-4104-be4c-a267bd5f6257.jpeg",
+    "slug": "pura-fitness-mongkok",
+    "name": "Pura Fitness Mongkok",
+    "description": "Open 24 hours gym in Mongkok",
     "author": "58c039018060197ca0b52d4c",
+    "photo": "1b7870df-e238-4104-be4c-a267bd5f6257.jpeg",
     "tags": [
       "Wifi",
       "Family Friendly"
     ],
     "created": "2017-03-08T20:13:15.965Z",
     "location": {
-      "address": "Mulberry Street Coffeehouse, James Street North, Hamilton, ON, Canada",
+      "address": "9 Wing Fong Road, Hang King Shopping Arcade,, 2/F Shop 207-208, Kwai Chung, ON, NEW TERRITORIES",
       "coordinates": [
-        -79.8669744,
-        43.2618072
+        114.180090,
+        22.324713
       ],
       "type": "Point"
     }
