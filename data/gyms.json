@@ -34,7 +34,6 @@
       "Shower",
       "Yogo",
       "Sauna",
-      "Licensed",
       "Cycling Studio"
     ],
     "created": "2017-03-08T17:05:50.134Z",
@@ -57,7 +56,6 @@
     "tags": [
       "Shower",
       "Yoga",
-      "Licensed",
       "Cycling Studio"
     ],
     "created": "2017-03-08T17:07:14.681Z",
@@ -79,7 +77,6 @@
     "photo": "6c34119d-b9fd-4051-911e-948a16068229.jpeg",
     "tags": [
       "Dance Studio",
-      "Licensed",
       "MMA/thai boxing",
       "Sauna",
       "Shower"
@@ -102,8 +99,9 @@
     "author": "58c039018060197ca0b52d4c",
     "photo": "9f2fc898-56b9-47fd-8a78-1d43c1377dc8.jpeg",
     "tags": [
-      "Vega",
-      "Licensed"
+      "MMA/thai boxing",
+      "Sauna",
+      "Shower"
     ],
     "created": "2017-03-08T19:12:03.957Z",
     "location": {
@@ -126,7 +124,6 @@
       "Wifi",
       "Yoga",
       "Dance Studio",
-      "Licensed",
       "MMA/thai boxing"
     ],
     "created": "2017-03-08T19:26:39.863Z",
